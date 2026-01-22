@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <form class="form">
+        <input
+                type="text"
+                name="eventName"
+                placeholder="Введіть назву івенту..."
+                required
+        >
+
+        <select name="eventType" required>
+            <option value="" disabled selected hidden>Оберіть тип івенту</option>
+            <option value="click">click</option>
+            <option value="lead">lead</option>
+            <option value="sale">sale</option>
+        </select>
+
+        <div class="buttons">
+            <button type="submit" class="btn btn-success">Додати подію</button>
+            <button type="button" id="clearBtn" class="btn btn-info">Очистити список</button>
+        </div>
+    </form>
+
+    <div class="stats">
+        <h1 id="statistics"></h1>
+        <ul>
+            <li class="eventTypeCount"></li>
+            <li class="eventTypeCount"></li>
+            <li class="eventTypeCount"></li>
+        </ul>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Назва</th>
+            <th>Тип</th>
+            <th>Дата створення</th>
+        </tr>
+        </thead>
+        <tbody id="eventsTableBody"></tbody>
+    </table>
+
+</div>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
